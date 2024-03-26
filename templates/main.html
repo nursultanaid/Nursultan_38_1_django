@@ -1,7 +1,8 @@
 {% extends "components/navbar.html" %}
 {% block content %}
+{% load static %}
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Christian_Dior_1954.jpg/548px-Christian_Dior_1954.jpg" width="400">
+<img src="{% static 'site_logo.webp' %}" width="400">
 
 <h1>
     Welcome to the main page {{name}}!

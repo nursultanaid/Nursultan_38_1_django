@@ -13,4 +13,5 @@ build/
 pip-cache/
 .env
 *.bak
-static
+staticfiles
+media
