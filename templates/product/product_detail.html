@@ -1,0 +1,27 @@
+{% extends 'components/navbar.html' %}
+{% block content %}
+
+<h1>{{ product.name }}</h1>
+
+<img src="/media/{{ product.image }}" class="card-img-top" alt="...">
+
+<p>{{ product.title }}</p>
+
+<p>Released on {{ product.created_at }}</p>
+
+<p>Rate: {{ product.rate }}</p>
+
+<h1> Reviews: </h1>
+
+{% for review in product.reviews.all %}
+    <p>{{ review.text }}</p>
+    <p>P.o. {{ review.created_at }}</p>
+{% endfor %}
+
+<h1> Tags: </h1>
+
+{% for tag in product.tags.all %}
+    <p>{{ tag.name }}</p>
+{% endfor %}
+
+{% endblock %}
