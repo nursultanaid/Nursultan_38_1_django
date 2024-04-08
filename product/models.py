@@ -16,12 +16,12 @@ class Tag(models.Model):
 
 class Product(models.Model):
     image = models.ImageField(upload_to='product_images/%Y/%m/%d/', null=True, blank=True)
-    name = models.CharField(max_length=30)
+    name = models.CharField(max_length=30, null=True, blank=True)
     title = models.CharField(max_length=150)
     price = models.IntegerField(default=0)
-    category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name='products')
+    category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name='products', null=True, blank=True)
     tags = models.ManyToManyField(Tag, related_name='products', blank=True)
-    rate = models.FloatField()
+    rate = models.FloatField(null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 

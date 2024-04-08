@@ -15,7 +15,7 @@ admin.site.register(Category)
 #     list_filter = ('created_at', 'updated_at')
 #     search_fields = ('name', 'title')
 #     readonly_fields = ('created_at', 'updated_at')
-#
+# #
 #     def save_model(self, request, obj, form, change):
 #         obj.title = obj.title.capitalize()
 #         super().save_model(request, obj, form, change)
@@ -34,3 +34,6 @@ admin.site.register(Category)
 
     # def has_delete_permission(self, request, obj=None):
     #     return False
+#
+# admin.site.register(Review)
+# admin.site.register(Tag)

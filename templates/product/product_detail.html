@@ -3,6 +3,10 @@
 
 <h1>{{ product.name }}</h1>
 
+<p>
+    Author: {{ product.user }}
+</p>
+
 <img src="/media/{{ product.image }}" class="card-img-top" alt="...">
 
 <p>{{ product.title }}</p>
@@ -23,5 +27,9 @@
 {% for tag in product.tags.all %}
     <p>{{ tag.name }}</p>
 {% endfor %}
+
+    <li class="nav-item">
+        <a class="nav-link" href="/reviews/">Add your review</a>
+    </li>
 
 {% endblock %}
